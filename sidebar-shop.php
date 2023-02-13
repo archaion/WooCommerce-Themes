@@ -11,7 +11,7 @@ if(! is_shop() && !is_archive()){
 <aside id="secondary" class="widget-area">
    <div class="widget-area-inside">
        <div class="entry-content <?php entry_content_class(); ?>">
-           <?php the_widget( 'WC_Widget_Product_Categories', array('title' => esc_html('Categories'),'count' => 1, 'hide_empty' => 1) ); ?>
+           <?php the_widget( 'WC_Widget_Product_Categories', array('title' => esc_html('Category'),'count' => 1, 'hide_empty' => 1) ); ?>
        </div>
    </div>
    <div class="widget-area-inside">

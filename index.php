@@ -11,6 +11,8 @@
  *
  * @package junkshop
  */
+header('Location: https://vampyre.tk/shop');
+exit();
 
 get_header();
 ?>
