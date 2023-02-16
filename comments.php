@@ -32,13 +32,13 @@ if ( post_password_required() ) {
 			if ( '1' === $junkshop_comment_count ) {
 				printf(
 					/* translators: 1: title. */
-					esc_html__( 'One thought on &ldquo;%1$s&rdquo;', 'junkshop' ),
+					esc_html__( 'One comment on &ldquo;%1$s&rdquo;', 'junkshop' ),
 					'<span>' . wp_kses_post( get_the_title() ) . '</span>'
 				);
 			} else {
 				printf( 
 					/* translators: 1: comment count number, 2: title. */
-					esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $junkshop_comment_count, 'comments title', 'junkshop' ) ),
+					esc_html( _nx( '%1$s comment on &ldquo;%2$s&rdquo;', '%1$s comments on &ldquo;%2$s&rdquo;', $junkshop_comment_count, 'comments title', 'junkshop' ) ),
 					number_format_i18n( $junkshop_comment_count ), // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 					'<span>' . wp_kses_post( get_the_title() ) . '</span>'
 				);
