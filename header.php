@@ -24,7 +24,7 @@
 <?php wp_body_open(); ?>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'junkshop' ); ?></a>
-
+   <header id='banner'></header>
 	<header id="masthead" class="site-header">
 		<div class="site-branding">
 			<?php
@@ -54,6 +54,7 @@
 					'menu_id'        => 'primary-menu',
 				)
 			);
+			get_search_form();
 			?>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
