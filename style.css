@@ -1233,13 +1233,14 @@ input {
 .tax-product_tag #banner,
 .tax-product_cat #banner {
   display: block;
+  background-image: url('./back.png');
+  background-size: 100% 100%;
   position: relative;
   top: 0;
   left: 0;
   height: 15em;
   width: 104%;
   margin-left: -2%;
-  background: black;
 }
 #masthead.site-header {
   position: fixed;
@@ -1524,21 +1525,48 @@ input.select2-search__field::placeholder {
   font-size: 94%;
   font-family: 'base';
 }
+/*.search #primary.site-main li.product .onsale {
+   top: 0;
+   right: 0;
+   left: auto;
+   margin: -.5em -.5em 0 0;
+}*/
+.search #primary.site-main li.product span.onsale {
+   height: 3.236em;
+   width: 3.236em;
+   padding: .202em;
+   font-size: 1em;
+   font-weight: 700;
+   position: absolute;
+   text-align: center;
+   line-height: 3.236;
+   top: -.5em;
+   right: -.5em;
+   margin: 0;
+   border-radius: 100%;
+   background-color: #77a464;
+   color: #fff;
+   font-size: .857em;
+   z-index: 9;
+}
 span.onsale {
   box-shadow: 0 0 0.3em 0.07em rgb(35 35 30);
   padding: 0 !important;
 }
-.search #primary.site-main article.product,
+.search #primary.site-main li.product {
+   position: relative;
+}
+.search #primary.site-main li.product,
 .woocommerce ul.products.columns-3 li.product,
 .woocommerce-page ul.products.columns-3 li.product {
   width: 32%;
   text-align: right;
 }
-.search #primary.site-main article.product a,
+.search #primary.site-main li.product a,
 .woocommerce ul.products li.product a {
   text-align: left;
 }
-.search #primary.site-main article.product,
+.search #primary.site-main li.product,
 .woocommerce ul.products li.product,
 .woocommerce-page ul.products li.product {
   margin: 0 2% 2em 0;
@@ -1553,15 +1581,19 @@ span.onsale {
      0.18vw 0.18vw 0.65vw 0.45vw rgb(33 33 28);
    /*box-shadow: 0.05vw 0.1vw 0.5vw 0.15vw rgb(37 37 32), 0.1vw 0.3vw 1vw 0.5vw rgb(40 40 35);*/
 }
+.search #primary.site-main li.product {
+  padding: 1.7%;
+}
+#primary.site-main li.last,
 .woocommerce ul.products li.last,
 .woocommerce-page ul.products li.last {
   margin-right: 0;
 }
-.search #primary.site-main article.product a img,
+.search #primary.site-main li.product a img,
 .woocommerce ul.products li.product a img {
   box-shadow: rgb(31 31 26) 0px 0px 0.25em 0.11em; /*0 0 0.2vw 0.1vw rgb(40 40 35);*/
 }
-.search #primary.site-main article.product .entry-title,
+.search #primary.site-main li.product .woocommerce-loop-product__title,
 .woocommerce ul.products li.product .woocommerce-loop-category__title,
 .woocommerce ul.products li.product .woocommerce-loop-product__title,
 .woocommerce ul.products li.product h3 {
@@ -1574,6 +1606,10 @@ span.onsale {
     font-size: 1.1em;
     font-weight: normal;*/
 }
+.search #primary.site-main li.product .woocommerce-loop-product__title {
+  margin-top: 0.5em !important;
+}
+.search #primary.site-main li.product .price,
 .woocommerce ul.products li.product .price {
   color: rgb(199 199 199);
   font-family: 'Avenir';
@@ -1586,15 +1622,32 @@ span.onsale {
   width: auto;
   pointer-events: none !important;
 }
+.search #primary.site-main li.product .price {
+  margin-top: -2.7%;
+}
+.search #primary.site-main li.product p.price del,
+.search #primary.site-main li.product span.price del {
+  opacity: 0.5;
+  display: inline-block;
+}
+.search #primary.site-main li.product .price ins {
+  background: 0 0;
+  font-weight: 700;
+  display: inline-block;
+}
+.search #primary.site-main li.product.sale .price ins,
+.search #primary.site-main li.product.sale .price del,
 .woocommerce ul.products li.product.sale .price del,
 .woocommerce ul.products li.product.sale .price ins {
-  margin-top: -0.4em;
+  margin-top: 0;
   float: left;
 }
+.search #primary.site-main li.product.sale .price ins,
 .woocommerce ul.products li.product.sale .price ins {
-  margin-top: 0.4em;
+  margin-top: 0.3em;
   clear: left;
 }
+.search a.button,
 .woocommerce a.button {
   /*background: 87 57 75<<<<<<<<< rgb(44 77 84) rgb(86 52 52)!important;*/
   background: rgb(91 57 76) !important;
@@ -1610,6 +1663,10 @@ span.onsale {
    box-shadow: 0.06vw 0.06vw 0.4vw 0.1vw rgb(53 53 48); /* 0 0 0.5vw 0.15vw rgb(61 61 56), 0 0 0.2vw 0.1vw rgb(38 38 33);
    border: 1px solid rgb(49 49 49) !important;*/
 }
+.search a.button {
+  margin-top: -2% !important;
+}
+.search #primary.site-main li.product .star-rating,
 .woocommerce ul.products li.product .star-rating {
   display: none;
 }
@@ -1670,17 +1727,20 @@ p.stock.out-of-stock {
     0.15em 0.15em 0.5em 0.25em rgb(33 33 28);
 }
 .woocommerce div.product form.cart {
-   display: flex;
-   justify-content: flex-start;
-   flex-direction: column;
-   text-align: left;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  text-align: left;
+}
+.woocommerce div.product form.variations_form.cart {
+  flex-direction: column;
 }
 .woocommerce div.product form.cart .variations {
   margin-bottom: 1.6em;
   display: block;
 }
 table.variations label::before {
-   content: none;
+  content: none;
 }
 table.variations label::after {
   content: '';
@@ -1696,10 +1756,10 @@ table.variations label::after {
 }
 .summary.entry-summary p.stock.out-of-stock {
   font-weight: bold;
-   font-weight: bold;
-   display: block;
-   margin-top: 0;
-   left: 0;
+  font-weight: bold;
+  display: block;
+  margin-top: 0;
+  left: 0;
 }
 .woocommerce div.product form.cart div.quantity {
   float: left;
@@ -2104,21 +2164,13 @@ form.checkout_coupon.woocommerce-form-coupon p {
 
 /************************************      SEARCH PAGE      ************************************/
 
-.search #primary.site-main article.product {
+.search #primary.site-main li.product {
   display: inline-block;
-  text-align: left;
   vertical-align: top;
   margin: 0 0 2em 0;
 }
-.search #primary.site-main article.product:nth-child(3n) {
+.search #primary.site-main li.product:nth-child(3n) {
   margin: 0 1.35vw 2em 1.35vw;
-}
-.search #primary.site-main article.product .entry-title {
-  text-align: right;
-  margin-top: -0.5em;
-}
-.search #primary.site-main article.product .entry-summary p {
-  margin-bottom: 0;
 }
 
 /************************************      404 PAGE      ************************************/
@@ -2185,11 +2237,14 @@ section.error-404.not-found input.search-submit,
     padding-right: 1em;
     padding-left: 1em;
   }
-  .search #primary.site-main article.product,
+  .search #primary.site-main li.product,
   .woocommerce ul.products.columns-3 li.product,
   .woocommerce-page ul.products.columns-3 li.product {
     width: 100%;
     padding: 4%;
+  }
+  .search #primary.site-main li.product:nth-child(3n) {
+    margin: inherit;
   }
 }
 @media screen and (max-width: 768px) {
@@ -2197,20 +2252,24 @@ section.error-404.not-found input.search-submit,
   .woocommerce-products-header.mb-4 {
     display: none;
   }
-  .search #primary.site-main article.product,
+  .search #primary.site-main li.product,
   .woocommerce ul.products[class*='columns-'] li.product,
   .woocommerce-page ul.products[class*='columns-'] li.product {
     margin: 0 0 2em;
   }
+  .search #primary.site-main li.product .price {
+    margin-top: -0.25em;
+  }
+  .search a.button,
   .woocommerce ul.products li.product .button {
-    margin-top: 0;
+    margin-top: 0 !important;
   }
   p.stock {
     display: none;
     clear: both;
     margin: 0.5em 0 0 0;
   }
-  .search #primary.site-main article.product .entry-title,
+  .search #primary.site-main li.product .woocommerce-loop-product__title,
   .woocommerce ul.products li.product .woocommerce-loop-product__title {
     margin: 0.1em 0 1.2em 0;
   }
@@ -2222,7 +2281,7 @@ section.error-404.not-found input.search-submit,
     width: auto;
     margin: 3em 0;
   }
-  .search #primary.site-main article.product,
+  .search #primary.site-main li.product,
   .woocommerce ul.products li.product,
   .woocommerce-page ul.products li.product,
   .woocommerce ul.products.columns-4 li.product,
@@ -2258,10 +2317,10 @@ section.error-404.not-found input.search-submit,
   .woocommerce-checkout .entry-content--white {
     padding: 1.5em 1.5em 0.5em 1.5em !important;
   }
-  /* SEARCH PAGE */
-  .search #primary.site-main article.product:nth-child(3n) {
+  /* SEARCH PAGE 
+  .search #primary.site-main li.product:nth-child(3n) {
     margin: 0;
-  }
+  }*/
 }
 @media screen and (max-width: 37.49em) {
   button.menu-toggle {
