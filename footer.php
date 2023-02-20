@@ -14,10 +14,29 @@
 
 <footer id="colophon" class="site-footer">
    <div class="site-info">
-      <!--<span class="sep"> | </span>-->
       <?php
       /* translators: 1: Theme name, 2: Theme author. */
-      printf(esc_html__('Theme by %s', 'junkshop'), '<a href="http://github.com/archaion/">Archaion</a>');
+      printf(esc_html__('%s', 'junkshop'), '<a href="http://vampyre.tk/refund_returns">Return Policy</a>');
+      ?>
+      <span class="sep"> | </span>
+      <?php
+      /* translators: 1: Theme name, 2: Theme author. */
+      printf(esc_html__('%s', 'junkshop'), '<a href="http://vampyre.tk/privacy-policy">Privacy Policy</a>');
+      ?>
+      <span class="sep"> | </span>
+      <?php
+      /* translators: 1: Theme name, 2: Theme author. */
+      printf(esc_html__('%s', 'junkshop'), '<a href="http://vampyre.tk/terms">Terms of Service</a>');
+      ?>
+      <span class="sep"> | </span>
+      <?php
+      /* translators: 1: Theme name, 2: Theme author. */
+      printf(esc_html__('%s', 'junkshop'), '<a href="http://vampyre.tk/contact">Contact</a>');
+      ?>
+      <span class="sep"> | </span>
+      <?php
+      /* translators: 1: Theme name, 2: Theme author. */
+      printf(esc_html__('%s', 'junkshop'), '<a href="http://vampyre.tk/about-us">About Us</a>');
       ?>
    </div><!-- .site-info -->
 </footer><!-- #colophon -->
