@@ -1137,7 +1137,7 @@ body {
 }
 @media (min-width: 1400px) {
   .site {
-    max-width: 1320px;
+    /*max-width: 1320px;*/
   }
 }
 /**
@@ -1226,21 +1226,57 @@ textarea {
 input {
   color: rgb(221 221 221) !important;
 }
-#banner {
+#banner,
+#banner0,
+#banner1,
+#banner2 {
   display: none;
 }
 .woocommerce-shop #banner,
 .tax-product_tag #banner,
 .tax-product_cat #banner {
   display: block;
-  background-image: url('./back.png');
-  background-size: 100% 100%;
+  padding: 5em 8% 0 9%;
   position: relative;
   top: 0;
   left: 0;
   height: 15em;
   width: 104%;
+  text-align: center;
   margin-left: -2%;
+}
+.woocommerce-shop #banner0,
+.tax-product_tag #banner0,
+.tax-product_cat #banner0 {
+  background-image: url(./back2.png);
+  background-size: 100% 100%;
+  margin: 1.4em 8% 0 0;
+  display: inline;
+  float: left;
+  height: 5em;
+  width: 6em;
+}
+.woocommerce-shop #banner1,
+.tax-product_tag #banner1,
+.tax-product_cat #banner1 {
+  background-image: url(./back0.png);
+  background-size: 100% 100%;
+  display: inline;
+  float: left;
+  margin: 1.5em 8% 0 0;
+  height: 5em;
+  width: 25em;
+}
+.woocommerce-shop #banner2,
+.tax-product_tag #banner2,
+.tax-product_cat #banner2 {
+  background-image: url(./back1.png);
+  background-size: 100% 100%;
+  display: inline;
+  float: left;
+  margin: 1.5em 0 0 0;
+  height: 5em;
+  width: 25em;
 }
 #masthead.site-header {
   position: fixed;
@@ -1260,22 +1296,22 @@ input {
 }
 .main-navigation {
   display: block;
-  margin: 0;
+  margin: 0 auto;
+  padding: 0 2%;
 }
 .main-navigation ul,
 .main-navigation.toggled ul {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   margin: 0;
   width: 100%;
-  padding: 0.3em 280px 0.4em 0;
+  padding: 0.3em 30% 0.4em 0.5em;
   font-style: italic;
   font-size: 120%;
 }
 .main-navigation form.search-form {
-  position: fixed;
-  top: 0.2em;
-  right: 2%;
+  margin: -2.5em 0 0 0;
+  float: right;
   display: inline;
 }
 .main-navigation form.search-form input.search-submit,
@@ -1531,30 +1567,33 @@ input.select2-search__field::placeholder {
    left: auto;
    margin: -.5em -.5em 0 0;
 }*/
+p.woocommerce-info.woocommerce-no-products-found {
+  margin-top: 4.6em !important;
+}
 .search #primary.site-main li.product span.onsale {
-   height: 3.236em;
-   width: 3.236em;
-   padding: .202em;
-   font-size: 1em;
-   font-weight: 700;
-   position: absolute;
-   text-align: center;
-   line-height: 3.236;
-   top: -.5em;
-   right: -.5em;
-   margin: 0;
-   border-radius: 100%;
-   background-color: #77a464;
-   color: #fff;
-   font-size: .857em;
-   z-index: 9;
+  height: 3.236em;
+  width: 3.236em;
+  padding: 0.202em;
+  font-size: 1em;
+  font-weight: 700;
+  position: absolute;
+  text-align: center;
+  line-height: 3.236;
+  top: -0.5em;
+  right: -0.5em;
+  margin: 0;
+  border-radius: 100%;
+  background-color: #77a464;
+  color: #fff;
+  font-size: 0.857em;
+  z-index: 9;
 }
 span.onsale {
   box-shadow: 0 0 0.3em 0.07em rgb(35 35 30);
   padding: 0 !important;
 }
 .search #primary.site-main li.product {
-   position: relative;
+  position: relative;
 }
 .search #primary.site-main li.product,
 .woocommerce ul.products.columns-3 li.product,
@@ -1914,7 +1953,8 @@ textarea:focus {
 .woocommerce form.login,
 .woocommerce form.register,
 .woocommerce-MyAccount-navigation,
-.woocommerce-MyAccount-content {
+.woocommerce-MyAccount-content,
+.woocommerce-ResetPassword.lost_reset_password {
   margin: 2em 0;
   text-align: left;
   border-radius: 2em;
@@ -1926,13 +1966,17 @@ textarea:focus {
   box-shadow: 0.12em 0.12em 0.2em 0.05em rgb(29 29 24),
     0.15em 0.15em 0.5em 0.25em rgb(33 33 28);
 }
+.woocommerce-ResetPassword.lost_reset_password {
+   padding: 0.5em 1.5em 1.1em 1.5em;
+}
 .woocommerce .woocommerce-form-register .woocommerce-form-register__submit,
 .woocommerce .woocommerce-form-login .woocommerce-form-login__submit,
 .woocommerce-address-fields button.button.wp-element-button,
 .woocommerce #payment #place_order,
 .woocommerce-page #payment #place_order,
 .woocommerce-EditAccountForm.edit-account
-  button.woocommerce-Button.button.wp-element-button {
+  button.woocommerce-Button.button.wp-element-button, 
+.woocommerce-ResetPassword.lost_reset_password button.woocommerce-Button button.wp-element-button {
   background: rgb(91 57 76) !important;
   color: rgb(221 221 221) !important;
   font-size: 1rem !important;
@@ -2221,8 +2265,36 @@ section.error-404.not-found input.search-submit,
   font-family: 'base';
 }
 
+/************************************      INFO PAGES      ************************************/
+
+
 /************************************      MOBILE VIEWS      ************************************/
 
+@media (min-width: 1400px) {
+  .site,
+  .main-navigation {
+    max-width: 1320px;
+  }
+  article.type-page {
+    margin: 6em;
+  }
+}
+@media (max-width: 1153.5px) {
+  .woocommerce-shop #banner1,
+  .tax-product_tag #banner1,
+  .tax-product_cat #banner1 {
+    margin: 2.5em 8% 0 0;
+    height: 4em;
+    width: 20em;
+  }
+  .woocommerce-shop #banner2,
+  .tax-product_tag #banner2,
+  .tax-product_cat #banner2 {
+    margin: 2.5em 0 0 0;
+    height: 4em;
+    width: 20em;
+  }
+}
 @media (max-width: 991.98px) {
   .woocommerce-products-header__title.page-title {
     position: absolute;
@@ -2232,8 +2304,37 @@ section.error-404.not-found input.search-submit,
     margin: 0 auto;
   }
 }
+@media (max-width: 950.5px) {
+  .woocommerce-shop #banner,
+  .tax-product_tag #banner,
+  .tax-product_cat #banner {
+    padding: 5em 8% 0 16%;
+  }
+  .woocommerce-shop #banner0,
+  .tax-product_tag #banner0,
+  .tax-product_cat #banner0 {
+    margin: 1em 8% 0 0;
+    height: 9em;
+    width: 10em;
+  }
+  .woocommerce-shop #banner1,
+  .tax-product_tag #banner1,
+  .tax-product_cat #banner1 {
+    margin: 0.5em 8% 0 0;
+  }
+  .woocommerce-shop #banner2,
+  .tax-product_tag #banner2,
+  .tax-product_cat #banner2 {
+    margin: 1.5em 0 0 0;
+  }
+  .main-navigation ul,
+  .main-navigation.toggled ul {
+    padding: 0.3em 40% 0.4em 0.5em;
+  }
+}
 @media (max-width: 767.98px) {
-  .site {
+  .site,
+  .main-navigation {
     padding-right: 1em;
     padding-left: 1em;
   }
@@ -2290,6 +2391,9 @@ section.error-404.not-found input.search-submit,
     padding: 1.2em;
     width: 100%;
   }
+  .woocommerce div.product .woocommerce-tabs .panel {
+    padding: 1.2em 1.2em 0 1.2em;
+  }
   /*.woocommerce div.product form.cart div.quantity {
     left: -8.8em;
   }
@@ -2342,8 +2446,90 @@ section.error-404.not-found input.search-submit,
     background: linear-gradient(90deg, rgb(35 35 30) 8%, transparent 25%);
     box-shadow: none;
   }
+  .main-navigation li {
+    margin-top: 1em;
+  }
   .main-navigation form.search-form {
-    top: 0.2em;
-    right: 1em;
+    margin: 0.2em 0 0 0;
+  }
+}
+@media (max-width: 681px) {
+  .woocommerce-shop #banner,
+  .tax-product_tag #banner,
+  .tax-product_cat #banner {
+    padding: 5em 5% 0 12%;
+  }
+  .woocommerce-shop #banner0,
+  .tax-product_tag #banner0,
+  .tax-product_cat #banner0 {
+    margin: 0.5em 8% 0 0;
+    height: 8em;
+    width: 9em;
+  }
+  .woocommerce-shop #banner1,
+  .tax-product_tag #banner1,
+  .tax-product_cat #banner1 {
+    margin: 0 8% 0 0;
+    height: 3.5em;
+    width: 17em;
+  }
+  .woocommerce-shop #banner2,
+  .tax-product_tag #banner2,
+  .tax-product_cat #banner2 {
+    margin: 1.5em 0 0 0;
+    height: 3.5em;
+    width: 17em;
+  }
+  article.type-page {
+    margin: 5em 2em 2em 2em;
+  }
+}
+@media (max-width: 552px) {
+  .woocommerce-shop #banner,
+  .tax-product_tag #banner,
+  .tax-product_cat #banner {
+    padding: 5em 5% 0 10%;
+  }
+  .woocommerce-shop #banner0,
+  .tax-product_tag #banner0,
+  .tax-product_cat #banner0 {
+    height: 20vw;
+    width: 21vw;
+  }
+  .woocommerce-shop #banner1,
+  .tax-product_tag #banner1,
+  .tax-product_cat #banner1 {
+    height: 8.5vw;
+    width: 45vw;
+  }
+  .woocommerce-shop #banner2,
+  .tax-product_tag #banner2,
+  .tax-product_cat #banner2 {
+    height: 8.5vw;
+    width: 45vw;
+  }
+  .woocommerce div.product .woocommerce-tabs ul.tabs li {
+    font-size: 80%;
+  }
+}
+@media (max-width: 350px) {
+  .woocommerce-shop #banner,
+  .tax-product_tag #banner,
+  .tax-product_cat #banner {
+    height: 12em;
+  }
+  .woocommerce-shop #banner0,
+  .tax-product_tag #banner0,
+  .tax-product_cat #banner0 {
+    margin: 0.5% 8% 0 0;
+    height: 22.5vw;
+    width: 23vw;
+  }
+  .woocommerce .woocommerce-result-count,
+  .woocommerce .woocommerce-ordering {
+    font-size: 80%;
+  }
+  .woocommerce div.product .woocommerce-tabs ul.tabs li {
+    font-size: 70%;
   }
 }
