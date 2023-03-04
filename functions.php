@@ -234,10 +234,22 @@ function entry_content_class() {
 add_action('woocommerce_after_shop_loop_item', 'show_stock', 10);*/
 
 add_filter('gettext', 'change_readmore_text', 20, 3);
-
 function change_readmore_text($translated_text, $text, $domain) {
    if (!is_admin() && $domain === 'woocommerce' && $text === 'Read more') {
       $text = 'View product';
    }
    return $text;
+}
+
+add_filter('woocommerce_catalog_orderby', 'custom_sorting');
+function custom_sorting($sorting_options){
+    $sorting_options = array(
+        'menu_order' => __( 'Unsorted', 'woocommerce' ),
+        'date'       => __( 'Latest', 'woocommerce' ),
+        'price'      => __( 'Price: low to high', 'woocommerce' ),
+        'price-desc' => __( 'Price: high to low', 'woocommerce' ),
+        'rating'     => __( 'Average rating', 'woocommerce' ),
+        'popularity' => __( 'Popularity', 'woocommerce' ),
+    );
+    return $sorting_options;
 }
