@@ -214,7 +214,7 @@ function ct_woocommerce_before_main_content() {
    <header class="woocommerce-products-header mb-4">
       <h1 class="woocommerce-products-header__title page-title"><?php woocommerce_page_title(); ?></h1>
    </header>
-<?php
+   <?php
 }
 function entry_content_class() {
    if (is_front_page()) {
@@ -242,14 +242,20 @@ function change_readmore_text($translated_text, $text, $domain) {
 }
 
 add_filter('woocommerce_catalog_orderby', 'custom_sorting');
-function custom_sorting($sorting_options){
-    $sorting_options = array(
-        'menu_order' => __( 'Unsorted', 'woocommerce' ),
-        'date'       => __( 'Latest', 'woocommerce' ),
-        'price'      => __( 'Price: low to high', 'woocommerce' ),
-        'price-desc' => __( 'Price: high to low', 'woocommerce' ),
-        'rating'     => __( 'Average rating', 'woocommerce' ),
-        'popularity' => __( 'Popularity', 'woocommerce' ),
-    );
-    return $sorting_options;
+function custom_sorting($sorting_options) {
+   $sorting_options = array(
+      'menu_order' => __('Unsorted', 'woocommerce'),
+      'date'       => __('Latest', 'woocommerce'),
+      'price'      => __('Price: low to high', 'woocommerce'),
+      'price-desc' => __('Price: high to low', 'woocommerce'),
+      'rating'     => __('Average rating', 'woocommerce'),
+      'popularity' => __('Popularity', 'woocommerce'),
+   );
+   return $sorting_options;
 }
+function shop_title() {
+   if (is_shop()) { ?>
+      <title>Bezanty</title>
+<?php }
+}
+add_action('wp_head', 'shop_title', 0);
