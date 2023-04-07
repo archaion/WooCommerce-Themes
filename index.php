@@ -11,7 +11,7 @@
  *
  * @package junkshop
  */
-header('Location: https://vampyre.tk/shop');
+header('Location: https://bezanty.co/shop');
 exit();
 
 get_header();

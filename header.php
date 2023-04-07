@@ -32,7 +32,7 @@
       </header>
       <header id="vidwrap">
          <video id="vid" autoplay="true" muted="true" loop="true">
-            <source src="https://vampyre.tk/wp-content/themes/aaa/Slideshow.mp4" type="video/mp4">
+            <source src="https://bezanty.co/wp-content/themes/Bezanty-Theme/Slideshow.mp4" type="video/mp4">
          </video>
       </header>
       <header id="masthead" class="site-header">

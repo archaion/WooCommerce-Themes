@@ -244,8 +244,8 @@ function change_readmore_text($translated_text, $text, $domain) {
 add_filter('woocommerce_catalog_orderby', 'custom_sorting');
 function custom_sorting($sorting_options) {
    $sorting_options = array(
-      'menu_order' => __('Unsorted', 'woocommerce'),
-      'date'       => __('Latest', 'woocommerce'),
+      'menu_order' => __('Alphabetical', 'woocommerce'),
+      'date'       => __('Newest first', 'woocommerce'),
       'price'      => __('Price: low to high', 'woocommerce'),
       'price-desc' => __('Price: high to low', 'woocommerce'),
       'rating'     => __('Average rating', 'woocommerce'),
@@ -259,3 +259,4 @@ function shop_title() {
 <?php }
 }
 add_action('wp_head', 'shop_title', 0);
+
