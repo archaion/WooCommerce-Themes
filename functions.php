@@ -260,3 +260,43 @@ function shop_title() {
 }
 add_action('wp_head', 'shop_title', 0);
 
+/*function stripe_fields_styles( $styles ) {
+   return array(
+       'base' => array(
+           'iconColor'     => '#666EE8',
+           'color'         => '#31325F',
+           'fontSize'      => '15px',
+           '::placeholder' => array(
+               'color' => '#CFD7E0',
+/*label.p-FieldLabel.Label {
+   font-family: sans-serif !important;
+   letter-spacing: 0.25px;
+ }
+ .Input::placeholder {
+    color: rgb(140 140 140) !important;
+ }
+ .Input {
+   border: 1px solid rgb(140 140 140) !important;
+ }
+ .p-CardCvcIcons.Input {
+   padding-right: 2.65em;
+ }
+#payment
+  .payment_methods
+  li
+  .payment_box.payment_method_woocommerce_payments
+  fieldset {
+  margin: 0;
+}
+           ),
+       ),
+   );
+}
+
+add_filter( 'wc_stripe_elements_styling', 'stripe_fields_styles' );*/
+
+add_action('wp_logout','auto_redirect_after_logout');
+function auto_redirect_after_logout(){
+  wp_safe_redirect( home_url() );
+  exit();
+}
