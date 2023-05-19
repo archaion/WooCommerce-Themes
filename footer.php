@@ -38,9 +38,37 @@
       /* translators: 1: Theme name, 2: Theme author. */
       printf(esc_html__('%s', 'junkshop'), '<a href="http://bezanty.co/about-us">About Us</a>');
       ?>
+      <span class="sep"> | </span>
+      <?php
+      /* translators: 1: Theme name, 2: Theme author. */
+      printf(esc_html__('%s', 'junkshop'), '<a href="http://bezanty.co/FAQs">FAQs</a>');
+      ?>
    </div><!-- .site-info -->
 </footer><!-- #colophon -->
 </div><!-- #page -->
+
+<script>
+   <?php if (is_search()) : ?>
+      document.querySelector('.page-title').innerHTML = 'Search'
+   <?php endif; ?>
+   const searchbar = document.getElementById('searchbar')
+   const search = document.getElementById('search-toggle')
+   const filters = document.getElementById('filters')
+
+   search.addEventListener('click', function() {
+      searchbar.style.marginLeft == '0px' ?
+         searchbar.style.setProperty('margin-left', '-1000px', 'important') :
+         searchbar.style.setProperty('margin-left', '0', 'important')
+   })
+
+   filters.addEventListener('click', function() {
+      searchbar.style.setProperty('margin-left', '-1000px', 'important')
+   })
+   /*document.addEventListener('click', function(event) {
+      const inside = searchbar.contains(event.target)
+      if (!inside) searchbar.style.setProperty('margin-left', '-1000px', 'important')
+   })*/
+</script>
 
 <?php wp_footer(); ?>
 

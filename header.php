@@ -28,13 +28,14 @@
       <a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e('Skip to content', 'junkshop'); ?></a>
       <header id='banner'>
          <div id='banner1'></div>
-         <!--<div id='banner2'>IMPORT & DESIGN</div>-->
       </header>
-      <header id="vidwrap">
-         <video id="vid" autoplay="true" muted="true" loop="true">
-            <source src="https://bezanty.co/wp-content/themes/NEW/Slideshow.mp4" type="video/mp4">
-         </video>
-      </header>
+      <?php if (is_shop() || is_archive() || is_search()) : ?>
+         <header id="vidwrap">
+            <video id="vid" autoplay="true" muted="true" loop="true">
+               <source src="https://bezanty.co/wp-content/themes/NEW/Slideshow.mp4" type="video/mp4">
+            </video>
+         </header>
+      <?php endif; ?>
       <header id="masthead" class="site-header">
          <div class="site-branding">
             <?php
@@ -57,15 +58,29 @@
          </div><!-- .site-branding -->
 
          <nav id="site-navigation" class="main-navigation">
-            <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e('Menu', 'junkshop'); ?></button>
+            <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e('Page', 'junkshop'); ?></button>
+            <button id="search-toggle"><?php esc_html_e('Find', 'junkshop'); ?></button>
+            <section id="searchbar" class="widget widget_block widget_search">
+               <form role="search" method="get" action="https://bezanty.co/" class="wp-block-search__button-outside wp-block-search__text-button wp-block-search">
+                  <label for="wp-block-search__input-1" class="wp-block-search__label">Search</label>
+                  <div class="wp-block-search__inside-wrapper " style="width: 777px">
+                     <input type="search" id="wp-block-search__input-1" class="wp-block-search__input" name="s" value="" placeholder="Search products…" required="">
+                     <input type="hidden" name="post_type" value="product">
+                     <button type="submit" class="wp-block-search__button wp-element-button">Search</button>
+                     <?php if (is_shop() || is_archive() || is_search()) : ?>
+                        <a id="filters" href="#secondary">Filters</a>
+                     <?php else : ?>
+                        <a id="filters" href="<?php echo esc_url('https://bezanty.co/shop#secondary'); ?>">Filters</a>
+                     <?php endif; ?>
+                  </div>
+               </form>
+            </section>
             <?php
             wp_nav_menu(
                array(
                   'theme_location' => 'menu-1',
                   'menu_id'        => 'primary-menu',
                )
-            );
-            get_search_form();
-            ?>
+            ); ?>
          </nav><!-- #site-navigation -->
       </header><!-- #masthead -->

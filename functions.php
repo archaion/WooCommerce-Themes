@@ -214,7 +214,7 @@ function ct_woocommerce_before_main_content() {
    <header class="woocommerce-products-header mb-4">
       <h1 class="woocommerce-products-header__title page-title"><?php woocommerce_page_title(); ?></h1>
    </header>
-   <?php
+<?php
 }
 function entry_content_class() {
    if (is_front_page()) {
@@ -253,12 +253,6 @@ function custom_sorting($sorting_options) {
    );
    return $sorting_options;
 }
-function shop_title() {
-   if (is_shop()) { ?>
-      <title>Bezanty</title>
-<?php }
-}
-add_action('wp_head', 'shop_title', 0);
 
 /*function stripe_fields_styles( $styles ) {
    return array(
@@ -295,8 +289,16 @@ add_action('wp_head', 'shop_title', 0);
 
 add_filter( 'wc_stripe_elements_styling', 'stripe_fields_styles' );*/
 
-add_action('wp_logout','auto_redirect_after_logout');
-function auto_redirect_after_logout(){
-  wp_safe_redirect( home_url() );
-  exit();
+add_action('wp_logout', 'auto_redirect_after_logout');
+function auto_redirect_after_logout() {
+   wp_safe_redirect(home_url());
+   exit();
 }
+
+/*function change_title( $title ) {
+   if ( is_search() && isset( $title['title'] ) ) {
+       $title['title'] = 'Search';
+   }
+   return $title;
+}
+add_filter( 'document_title_parts', 'change_title', 99);*/
