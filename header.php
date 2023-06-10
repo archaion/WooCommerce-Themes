@@ -58,8 +58,8 @@
          </div><!-- .site-branding -->
 
          <nav id="site-navigation" class="main-navigation">
-            <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e('Page', 'junkshop'); ?></button>
-            <button id="search-toggle"><?php esc_html_e('Find', 'junkshop'); ?></button>
+            <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e('🧾 Page', 'junkshop'); ?></button>
+            <button id="search-toggle"><?php esc_html_e('Find 🔍', 'junkshop'); ?></button>
             <section id="searchbar" class="widget widget_block widget_search">
                <form role="search" method="get" action="https://bezanty.co/" class="wp-block-search__button-outside wp-block-search__text-button wp-block-search">
                   <label for="wp-block-search__input-1" class="wp-block-search__label">Search</label>

@@ -55,19 +55,25 @@
    const search = document.getElementById('search-toggle')
    const filters = document.getElementById('filters')
 
-   search.addEventListener('click', function() {
+   /*search.addEventListener('click', function() {
       searchbar.style.marginLeft == '0px' ?
-         searchbar.style.setProperty('margin-left', '-1000px', 'important') :
+         searchbar.style.setProperty('margin-left', '-400px', 'important') :
          searchbar.style.setProperty('margin-left', '0', 'important')
-   })
+   })*/
 
    filters.addEventListener('click', function() {
-      searchbar.style.setProperty('margin-left', '-1000px', 'important')
+      searchbar.style.setProperty('margin-left', '-400px', 'important')
    })
-   /*document.addEventListener('click', function(event) {
-      const inside = searchbar.contains(event.target)
-      if (!inside) searchbar.style.setProperty('margin-left', '-1000px', 'important')
-   })*/
+
+   document.addEventListener('click', function(e) {
+      if (!search.contains(e.target) && !searchbar.contains(e.target) && searchbar.style.marginLeft == '0px') {
+         searchbar.style.setProperty('margin-left', '-400px', 'important');
+      } else if (search.contains(e.target)) {
+         searchbar.style.marginLeft == '0px' ?
+            searchbar.style.setProperty('margin-left', '-400px', 'important') :
+            searchbar.style.setProperty('margin-left', '0', 'important')
+      }
+   });
 </script>
 
 <?php wp_footer(); ?>
