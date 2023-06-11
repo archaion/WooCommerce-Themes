@@ -32,7 +32,7 @@
       <?php if (is_shop() || is_archive() || is_search()) : ?>
          <header id="vidwrap">
             <video id="vid" autoplay="true" muted="true" loop="true">
-               <source src="https://bezanty.co/wp-content/themes/NEW/Slideshow.mp4" type="video/mp4">
+               <source src="https://PLACEHOLDER-URL.COM/wp-content/themes/NEW/Slideshow.mp4" type="video/mp4">
             </video>
          </header>
       <?php endif; ?>
@@ -61,7 +61,7 @@
             <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e('🧾 Page', 'junkshop'); ?></button>
             <button id="search-toggle"><?php esc_html_e('Find 🔍', 'junkshop'); ?></button>
             <section id="searchbar" class="widget widget_block widget_search">
-               <form role="search" method="get" action="https://bezanty.co/" class="wp-block-search__button-outside wp-block-search__text-button wp-block-search">
+               <form role="search" method="get" action="https://PLACEHOLDER-URL.COM/" class="wp-block-search__button-outside wp-block-search__text-button wp-block-search">
                   <label for="wp-block-search__input-1" class="wp-block-search__label">Search</label>
                   <div class="wp-block-search__inside-wrapper " style="width: 777px">
                      <input type="search" id="wp-block-search__input-1" class="wp-block-search__input" name="s" value="" placeholder="Search products…" required="">
@@ -70,7 +70,7 @@
                      <?php if (is_shop() || is_archive() || is_search()) : ?>
                         <a id="filters" href="#secondary">Filters</a>
                      <?php else : ?>
-                        <a id="filters" href="<?php echo esc_url('https://bezanty.co/shop#secondary'); ?>">Filters</a>
+                        <a id="filters" href="<?php echo esc_url('https://PLACEHOLDER-URL.COM/shop#secondary'); ?>">Filters</a>
                      <?php endif; ?>
                   </div>
                </form>
