@@ -11,7 +11,7 @@
  *
  * @package junkshop
  */
-header('Location: https://PLACEHOLDER-URL.COM/shop');
+header('Location: https://PLACEHOLDER.COM/shop');
 exit();
 
 get_header();

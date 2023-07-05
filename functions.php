@@ -237,6 +237,8 @@ add_filter('gettext', 'change_readmore_text', 20, 3);
 function change_readmore_text($translated_text, $text, $domain) {
    if (!is_admin() && $domain === 'woocommerce' && $text === 'Read more') {
       $text = 'View product';
+   } else if (!is_admin() && $domain === 'woocommerce' && $text === 'Select options') {
+      $text = 'View styles';
    }
    return $text;
 }
@@ -287,13 +289,17 @@ function custom_sorting($sorting_options) {
    );
 }
 
-add_filter( 'wc_stripe_elements_styling', 'stripe_fields_styles' );*/
+add_filter( 'wc_stripe_elements_styling', 'stripe_fields_styles' );
 
 add_action('wp_logout', 'auto_redirect_after_logout');
 function auto_redirect_after_logout() {
    wp_safe_redirect(home_url());
    exit();
+}*/
+function redirect_after_logout($logout_url, $redirect) {
+   return $logout_url . '&amp;redirect_to=' . home_url();
 }
+add_filter('logout_url', 'redirect_after_logout', 10, 2);
 
 /*function change_title( $title ) {
    if ( is_search() && isset( $title['title'] ) ) {
