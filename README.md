@@ -1,7 +1,7 @@
 <h2>WooCommerce Themes</h2>
 
 
-The Junkshop e-commerce template provides all the core functions of a production-ready Woocommerce site in one high quality package. It has been used in the development professional e-commerce websites, as seen in the following examples. The screenshots below also include a preview of the Haunted theme; a fork of this template planned for release at a later date. 
+The Junkshop theme for Woocommerce provides all the core functions of a standard e-commerce site in one convenient and high quality package. This template theme has been used in the development professional e-commerce websites, as shown in the following examples. The screenshots below also include a preview of the Haunted theme; a fork of the Junkshop template planned for release at a later date. 
 
 (Note: This version of the theme is slightly outdated.)
 <div></div><br>
@@ -17,9 +17,9 @@ The Junkshop e-commerce template provides all the core functions of a production
 
 <b>Optimization</b> – Minimal code (no frameworks), SEO best practices (SEO Framework), fast loading (Litespeed Cache), security features (Wordfence).
 
-<b>Automation</b> – Social media bots (Make), product sourcing (DSers), order fulfillment (by suppliers).
+<b>Automation</b> – Social media bots (Make), product importing and order fulfillment (DSers).
 
-<b>AI enhanced design</b> – Product design and mockups (Canva, Midjourney), image upscaling (Gigapixel), social media content (OpenRep)
+<b>AI enhanced design</b> – Product design and mockups (Canva, Midjourney), image upscaling (Gigapixel), social media content (OpenRep).
 <div></div><br>
 
 
@@ -30,7 +30,7 @@ The Junkshop e-commerce template provides all the core functions of a production
 https://bezanty.co
 <br><br>
 
-Bezanty is an independent online dropshipping and print-on-demand clothing company. In addition to a large selection of popular brand name fashion items, Bezanty is one of the first online retailers to offer a selection of clothing and accessories designed with AI image generation technology.
+Bezanty is an independent online dropshipping and print-on-demand clothing company. In addition to carrying a large selection of popular brand name fashion items, Bezanty is one of the first online retailers to offer a selection of clothing and accessories designed with AI image generation technology.
 <br>
 
 <h4>Desktop view</h4>
@@ -67,4 +67,4 @@ Pointe du Lac is a fully operational, extensively tested, and feature complete W
 <h4>Account orders</h4>
 <img width="900" alt="account" src="https://github.com/archaion/WooCommerce-Themes/assets/80986857/7c0939f6-c4d0-4c95-958a-189b5dd80bae">
 <h4>Multichannel bots</h4>
-<img width="960" alt="multichannel" src="https://github.com/archaion/WooCommerce-Themes/assets/80986857/f9f4d4bb-bd43-451c-8727-19cb2ec377ec">
+<img width="960" alt="multichannel" src="https://github.com/archaion/WooCommerce-Themes/assets/80986857/c45e18df-7ed1-4c0d-8735-8f24c594faea">
